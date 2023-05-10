@@ -1,0 +1,30 @@
+definitions:
+  Articulo:
+    type: object
+    required:
+      - id
+      - nombre
+      - descripcion
+      - precio
+    properties:
+      id:
+        type: string
+        format: uuid
+        description: "Clave única del producto. Dato alfanumérico de 10 caracteres. No se permite actualizar."
+        maxLength: 10
+      nombre:
+        type: string
+        description: "Nombre con el que se identifica al producto. Dato alfanumérico de hasta 20 caracteres. No se permite actualizar."
+        maxLength: 20
+      descripcion:
+        type: string
+        description: "Campo que contiene una descripción general del producto. Dato alfanumérico de hasta 200 caracteres. Se permite actualizar."
+        maxLength: 200
+      precio:
+        type: number
+        format: double
+        description: "Dato numérico con dos decimales. No se permite actualizar."
+      modelo:
+        type: string
+        description: "Alfanumérico de 10 caracteres. Se permite actualizar."
+        maxLength: 10
